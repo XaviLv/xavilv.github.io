@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on Even - A super concise theme for Hugo</title>
+    <link>https://xavilv.github.io/categories/algorithm/</link>
+    <description>Recent content in Algorithm on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Jul 2019 10:57:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://xavilv.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Course] Deep-L Layer Neural Network</title>
+      <link>https://xavilv.github.io/post/deeplearning/andrew_04_deep_nn/</link>
+      <pubDate>Sun, 07 Jul 2019 10:57:10 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/post/deeplearning/andrew_04_deep_nn/</guid>
+      <description>In this article we will talk about the deep neural network.</description>
+    </item>
+    
+    <item>
+      <title>[Course] Shallow Neural Network</title>
+      <link>https://xavilv.github.io/post/deeplearning/andrew_03_shallow_nn/</link>
+      <pubDate>Sun, 30 Jun 2019 17:17:10 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/post/deeplearning/andrew_03_shallow_nn/</guid>
+      <description>In this article we will talk about the shallow neural network (one layer)&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Understanding of Iteration, Batch and Epoch</title>
+      <link>https://xavilv.github.io/post/deeplearning/basic_concept/</link>
+      <pubDate>Mon, 24 Jun 2019 22:47:10 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/post/deeplearning/basic_concept/</guid>
+      <description>Make clear of the differences of the fundamental concept, iteration, batch, mini-batch and epoch.</description>
+    </item>
+    
+    <item>
+      <title>[Course] Introduction to Deep Learning</title>
+      <link>https://xavilv.github.io/post/deeplearning/andrew_01_intro/</link>
+      <pubDate>Wed, 29 May 2019 16:20:31 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/post/deeplearning/andrew_01_intro/</guid>
+      <description>A thousand miles begin with a single step. Follow the step of Doctor Andrew Ng, and move on to the deep-learning world.</description>
+    </item>
+    
+  </channel>
+</rss>

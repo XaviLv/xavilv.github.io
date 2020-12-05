@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Course] Shallow Neural Network - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Ivan" /><meta name="description" content="In this article we will talk about the shallow neural network (one layer)&amp;hellip;" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.65.3 with theme even" />
+
+
+<link rel="canonical" href="https://xavilv.github.io/post/deeplearning/andrew_03_shallow_nn/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[Course] Shallow Neural Network" />
+<meta property="og:description" content="In this article we will talk about the shallow neural network (one layer)&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xavilv.github.io/post/deeplearning/andrew_03_shallow_nn/" />
+<meta property="article:published_time" content="2019-06-30T17:17:10+08:00" />
+<meta property="article:modified_time" content="2019-06-30T17:17:10+08:00" />
+<meta itemprop="name" content="[Course] Shallow Neural Network">
+<meta itemprop="description" content="In this article we will talk about the shallow neural network (one layer)&hellip;">
+<meta itemprop="datePublished" content="2019-06-30T17:17:10&#43;08:00" />
+<meta itemprop="dateModified" content="2019-06-30T17:17:10&#43;08:00" />
+<meta itemprop="wordCount" content="916">
+
+
+
+<meta itemprop="keywords" content="neural network,theory," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Course] Shallow Neural Network"/>
+<meta name="twitter:description" content="In this article we will talk about the shallow neural network (one layer)&hellip;"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ivan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Ivan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Course] Shallow Neural Network</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-06-30 </span>
+        <div class="post-category">
+            <a href="/categories/algorithm/"> Algorithm </a>
+            </div>
+          <span class="more-meta"> 916 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neural-network-representation">Neural Network Representation</a></li>
+        <li><a href="#vectorizing-across-multiple-examples">Vectorizing across multiple examples</a></li>
+        <li><a href="#activation-functions">Activation Functions</a></li>
+        <li><a href="#gradient-descent-for-nn-backpropagation">Gradient Descent for NN (<em>backpropagation</em>)</a></li>
+        <li><a href="#random-initialization">Random Initialization</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Every neuron corresponds to two steps of calculation: one is to compute <em>z</em> (linear expression), and the other to compute <em>a</em> (non-linear expression).</p>
+<p>We&rsquo;ll use a superscript square bracket to refer to quantities associated with this stack of nodes called a layer.</p>
+<p>$$
+z^{[1]} = w^{[1]}x + b^{[1]}
+$$</p>
+<h2 id="neural-network-representation">Neural Network Representation</h2>
+<p>As demonstrated in the image below, when talking about the count of layers in a neural network, the <strong>input layer</strong> is not involved.</p>
+<p><img src="/images/blog/deeplearning/2_layer_nn.png" alt="Fig. Two Layer Neural Network"></p>
+<p>Each circle(node) in a layer represents two steps of computation.</p>
+<ul>
+<li>Linear: compute <font color=red><strong>z</strong></font></li>
+<li>Non-linear: compute the <font color=red><strong>activation</strong></font> as the sigmoid function of <strong>z</strong></li>
+</ul>
+<p><img src="/images/blog/deeplearning/node_detail.png" alt="Fig. Inside Node"></p>
+<p>So, as in this example, we can do the following calculations to carry out the whole process.</p>
+<p>$$
+z_1^{[1]} = w_1^{[1]T}x + b_1^{[1]} \quad a_1^{[1]} = \sigma(z_1^{[1]}) \newline
+z_2^{[1]} = w_2^{[1]T}x + b_2^{[1]} \quad a_2^{[1]} = \sigma(z_2^{[1]}) \newline
+&hellip;
+$$</p>
+<p>In order to accelerate the calculation, we should take advantage of the <strong>vectorization</strong> technique, instead of manually looping.</p>
+<p>$$
+Z^{[1]} = W^{[1]T}X + b^{[1]} \newline
+a^{[1]} = \sigma(Z^{[1]})
+$$</p>
+<p>Expanded by stacking them in <font color=red>rows</font>:</p>
+<p>$$
+\begin{bmatrix}
+z_1^{[1]} \cr
+z_2^{[1]} \cr
+z_3^{[1]} \cr
+z_4^{[1]}
+\end{bmatrix} =
+\begin{bmatrix}
+&mdash;&mdash; w_1^{[1]T} &mdash;&mdash; \cr
+&mdash;&mdash; w_2^{[1]T} &mdash;&mdash; \cr
+&mdash;&mdash; w_3^{[1]T} &mdash;&mdash; \cr
+&mdash;&mdash; w_4^{[1]T} &mdash;&mdash;
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \cr
+x_2 \cr
+x_3
+\end{bmatrix} +
+\begin{bmatrix}
+b_1^{[1]} \cr
+b_2^{[1]} \cr
+b_3^{[1]} \cr
+b_4^{[1]}
+\end{bmatrix}
+$$</p>
+<p>where, $$ w^{[1]T}.shape = (4,3) $$</p>
+<p><strong>Note:</strong> The sigmoid function should also be implemented in a vectorized way to maximize the functionality of matrix.</p>
+<br/>
+<h2 id="vectorizing-across-multiple-examples">Vectorizing across multiple examples</h2>
+<p>We define the matrix <em>X</em> to be equal to our <em>m</em> training examples stacked up in these <font color=red>columns</font> like below. So the horizontal index corresponds to different training examples. As you sweep through from left to right, you&rsquo;re scanning through the training set. And vertically, the vertical index corresponds to different nodes (i.e. hidden units) in the neural network.</p>
+<p>$$ X =
+\begin{bmatrix}
+| &amp; | &amp;  &amp; | \cr
+x^{(1)} &amp; x^{(2)} &amp; &hellip; &amp; x^{(m)} \cr
+| &amp; | &amp;  &amp; |
+\end{bmatrix}
+$$</p>
+<p>where, $$ X.shape = (n_x, m)$$</p>
+<p>And the <em>n-subscript-x</em> means the dimension of each sample feature vector.</p>
+<p>Similarly,</p>
+<p>$$ A^{[1]} =
+\begin{bmatrix}
+| &amp; | &amp;  &amp; | \cr
+a^{<a href="1">1</a>} &amp; a^{<a href="2">1</a>} &amp; &hellip; &amp; a^{<a href="m">1</a>} \cr
+| &amp; | &amp;  &amp; |
+\end{bmatrix}
+$$</p>
+<p>So,</p>
+<p>$$ Z^{[1]} = W^{[1]T}X + b^{[1]} $$</p>
+<br/>
+<h2 id="activation-functions">Activation Functions</h2>
+<br/>
+<font size=4>**Tanh & Sigmoid**</font>
+<p><font color=red size=4>tanh</font> almost always works <em>better</em>* than <font color=red>sigmoid</font> as an activation function. Because with values between +1 and -1, the mean of the activations that come out of your head is closer to having a zero mean.</p>
+<p>Sometimes when you training the algorithm, you might center the data and have your data have zero mean. Using <em>tanh</em> instead of <em>sigmoid</em> kind of having the effect of centering your data, which actually makes learning for the next layer much easier.</p>
+<p><img src="/images/blog/deeplearning/sigmoid_func.png" alt="$$ a = tanh(z) = {e^{z} - e^{-z} \over e^{z} + e^{-z}} $$"></p>
+<p>One exception is that when you&rsquo;re using binary classification, in which case you might use the <em>sigmoid</em> activation function for the output layer.</p>
+<p><img src="/images/blog/deeplearning/tanh_func.png" alt="$$ a = sigma(z) = {1 \over 1 + e^{-z}} $$"></p>
+<p><font color=orange>**Downside:**</font> If <em>z</em> is either very large or very small, the gradient of the derivative or the slope of this function becomes very small, close to zero. So this would slow down the gradient descent.</p>
+<br/>
+<font size=4>**ReLU (Rectified Linear Unit)**</font>
+<p>The slope or derivative is 1 when z is positive and 0 when it&rsquo;s not.</p>
+<p><img src="/images/blog/deeplearning/ReLU_func.png" alt="$$ a = ReLU(z) = max(0, z) $$"></p>
+<br/>
+<font size=4>**Rules of Thumb**</font>
+<p>If your output is 0 or 1, meaning you&rsquo;re doing the binary classification, the sigmoid function is very natural for the output layer. And then for all the hidden units <em>ReLU</em> is increasingly the default choice of the activation function.</p>
+<p><font color=orange>**Downside:**</font> The derivative is equal to zero when z is negative. There is another version called <em>Leaky ReLU</em>, which is usually better than <em>ReLU</em> although not used as much in practice.</p>
+<p>For half of the range of z, the slope of <em>ReLU</em> is zero, but in practice enough of your hidden units will have z greater than zero. So learning can still be quite fast for most training examples.</p>
+<br/>
+<h2 id="gradient-descent-for-nn-backpropagation">Gradient Descent for NN (<em>backpropagation</em>)</h2>
+<p><img src="/images/blog/deeplearning/logistic_regression.png" alt="Logistic Regression"></p>
+<p>When we talk about the logistic regression, we have this ,<font color=red><strong>forward pass</strong></font> where we compute <em>z</em>, then <em>a</em>, then the loss. And then to take the derivatives, we have this <font color=green><strong>backward pass</strong></font> where we could first compute <em>da</em>, then go on to <em>dz</em>, and then <em>dw</em>, <em>db</em>.</p>
+<p>The definition for the loss was,</p>
+<p>$$
+\ell(a, y) = -y\log{a} - (1-y)\log{(1-a)}
+$$</p>
+<p>And if we figure out this calculus, then,</p>
+<p>$$
+{d \over da}\ell(a, y) = -{y \over a} + {1-y \over 1-a}
+$$</p>
+<p>Since the derivative of <em>log(x)</em> is <em>1/x</em>.</p>
+<p><font color=orange>Note: </font>When programming in code, we usually use the <font color=red>da</font> to represent the derivative of <em>the loss function over a</em>.</p>
+<p>And according to the chamber of calculus,</p>
+<p>$$
+{\partial(a, y) \over \partial{z}} = {\partial(a, y) \over \partial{a}} * {da \over dz}
+$$</p>
+<br/>
+<h2 id="random-initialization">Random Initialization</h2>
+<p>When training a neural network, it is important to initialize the parameters randomly. Otherwise, no matter how long you train the network, all hidden units are still computing the same function all the time. So in this case, there is really no point of having more than one hidden units.</p>
+<p><img src="/images/blog/deeplearning/2_layer_nn_2.png" alt="shallow network"></p>
+<p>Take this network above as an example,</p>
+<p>$$
+w^{[1]} = np.random.randn(2,2) * 0.01 \newline
+b^{[1]} = np.zeros(2) \newline
+w^{[2]} = np.random.randn(1,2) * 0.01 \newline
+b^{[2]} = 0
+$$</p>
+<p>Usually, the weights will be multiplied by a very smalll number to be initialized into very small random values. So that if you&rsquo;re using sigmoid or tanh activation functions inside the network, they won&rsquo;t be saturated thus slowing down the learning.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ivan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-06-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/neural-network/">neural network</a>
+          <a href="/tags/theory/">theory</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/deeplearning/andrew_04_deep_nn/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Course] Deep-L Layer Neural Network</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/engineering/matplotlib/">
+            <span class="next-text nav-default">Matplotlib Samples</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="https://xavilv.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>Ivan</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

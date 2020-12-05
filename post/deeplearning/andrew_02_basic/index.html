@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Course] Neural Network Basics - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Ivan" /><meta name="description" content="Some basic knowledge before openning the gate of deep learning world&amp;hellip;" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.65.3 with theme even" />
+
+
+<link rel="canonical" href="https://xavilv.github.io/post/deeplearning/andrew_02_basic/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[Course] Neural Network Basics" />
+<meta property="og:description" content="Some basic knowledge before openning the gate of deep learning world&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xavilv.github.io/post/deeplearning/andrew_02_basic/" />
+<meta property="article:published_time" content="2019-05-31T21:20:31+08:00" />
+<meta property="article:modified_time" content="2019-05-31T21:20:31+08:00" />
+<meta itemprop="name" content="[Course] Neural Network Basics">
+<meta itemprop="description" content="Some basic knowledge before openning the gate of deep learning world&hellip;">
+<meta itemprop="datePublished" content="2019-05-31T21:20:31&#43;08:00" />
+<meta itemprop="dateModified" content="2019-05-31T21:20:31&#43;08:00" />
+<meta itemprop="wordCount" content="1451">
+
+
+
+<meta itemprop="keywords" content="neural network,theory," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Course] Neural Network Basics"/>
+<meta name="twitter:description" content="Some basic knowledge before openning the gate of deep learning world&hellip;"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ivan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Ivan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Course] Neural Network Basics</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-31 </span>
+        
+          <span class="more-meta"> 1451 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#binary-classification">Binary Classification</a>
+          <ul>
+            <li><a href="#notations">Notations</a></li>
+          </ul>
+        </li>
+        <li><a href="#logistic-regression-model">Logistic Regression Model</a>
+          <ul>
+            <li><a href="#goal">Goal</a></li>
+          </ul>
+        </li>
+        <li><a href="#logistic-regress-cost-function">Logistic Regress Cost Function</a></li>
+        <li><a href="#gradient-descent">Gradient Descent</a>
+          <ul>
+            <li><a href="#single-example">single example</a></li>
+            <li><a href="#m-examples"><em>m</em> examples</a></li>
+          </ul>
+        </li>
+        <li><a href="#vectorization">Vectorization</a>
+          <ul>
+            <li><a href="#further-vectorization">Further vectorization</a></li>
+          </ul>
+        </li>
+        <li><a href="#a-note-on-pythonnumpy-vectors">A note on python/numpy vectors</a></li>
+        <li><a href="#logistic-regression-explanation">Logistic Regression Explanation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="binary-classification">Binary Classification</h2>
+<p><em>Logistic regression</em> is an algorithm for binary classification.</p>
+<p>In computer, an image is stored by 3 matrices, representing intensily values of the R, G, B channels seperately. And pixels in each channel will be unrolled into a feature vector.</p>
+<p><em>Dimention of the input feature vector:</em></p>
+<p>$$ n = n_x = 64<em>64</em>3 = 12288 $$</p>
+<h3 id="notations">Notations</h3>
+<p>In the binary classification, our goal is to learn a classifier that can input an image by this feature vector <em>X</em>.</p>
+<p>A single training example will be donated as:</p>
+<p>$$(x,y)\quad x\in\reals^{n_x},; y\in{0,1}$$</p>
+<p><em>m</em> training examples:</p>
+<p>$${(x^{(1)},y^{(1)}),; (x^{(2)},y^{(2)}),;&hellip;;, (x^{(m)},y^{(m)})}$$</p>
+<p>where x is the feature vector and y is the label. And the superscript parentheses <em>i</em> is associated with the i-th training example.</p>
+<p>Training examples as a more compact notation, stacking them in <strong>Columns</strong>:</p>
+<ul>
+<li>feature vector</li>
+</ul>
+<p>$$X =
+\begin{bmatrix}
+| &amp; | &amp; &hellip; &amp; | \cr
+x^{(1)} &amp; x^{(2)} &amp; &hellip; &amp; x^{(m)} \cr
+| &amp; | &amp; &hellip; &amp; |
+\end{bmatrix}
+\quad X\in\reals^{n_x*m}
+$$</p>
+<ul>
+<li>label vector</li>
+</ul>
+<p>$$Y =
+\begin{bmatrix}
+y^{(1)}&amp;y^{(2)}&amp;&hellip;&amp;y^{(m)}
+\end{bmatrix}
+\quad Y\in\reals^{1*m}
+$$</p>
+<br/>
+<h2 id="logistic-regression-model">Logistic Regression Model</h2>
+<h3 id="goal">Goal</h3>
+<p>Try to learn parameters <em>W</em> and <em>B</em> so that <em>Y hat</em> becomes a good estimate of the chance of <em>Y</em> being equal to one.<br>
+<em>Y hat</em>, the estimate of <em>Y</em>, stands for the probability of the chance that <em>Y</em> is equal to one given the input features <em>x</em>.</p>
+<p>$$
+Given: \quad x, \quad want \quad \hat{y} = P(y=1|x) ,\quad x\in\reals^{n_x} \newline
+Parameters: \quad w\in\reals^{n_x}, \quad b\in\reals \newline
+Output: \quad \hat{y} = \sigma(w^Tx + b)
+$$</p>
+<p><img src="/images/blog/deeplearning/sigmoid_func.jpg" alt="sigmoid function"></p>
+<p>$$
+\sigma(z) = \dfrac{1}{1 + e^{-z}}
+$$</p>
+<br/>
+<h2 id="logistic-regress-cost-function">Logistic Regress Cost Function</h2>
+<p><strong>Loss(Error) Function</strong> is defined to measure <font color=red>how good</font> our output <em>y-hat</em> is when the true label is <em>y</em>, which must be a <font color=red>convex</font> function. So that there is only one <strong>local optimum</strong> (i.e. the global optimum).</p>
+<p>$$
+\ell(\hat{y},y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))
+$$</p>
+<p>Intuition why this loss funciton makes sense:</p>
+<p>$$
+If ;y = 1: \quad \ell(\hat{y},y) = -log\hat{y}, \quad \hat{y}\to1 \newline
+If ;y = 0: \quad \ell(\hat{y},y) = log(1-\hat{y}), \quad \hat{y}\to0
+$$</p>
+<p>The loss function is defined with respect to a single training example, measuring how well you&rsquo;re doing on a single training example.</p>
+<p><font size=4>Cost Function</font> measures how well you do on the entire training set, which is the cost of your parameters.</p>
+<p>$$
+J(w,b) = {1 \over m}\sum_{i=1}^{m}\ell(\hat{y}^{(i)}, y^{(i)}) = -{{1 \over m}y^{(i)}}\sum{i=1}^{m}[log\hat{y}^{(i)} + (1-y^{(i)})log(1-\hat{y}^{(i)})
+$$</p>
+<p>We&rsquo;re going to find the parameters that minimize the overall cost function <strong>J</strong>.</p>
+<br/>
+<h2 id="gradient-descent">Gradient Descent</h2>
+<h3 id="single-example">single example</h3>
+<p>It starts at the initial point and then takes a step in the steepest downhill direction. After enough iterations, it would converge to the global optimum point, or just get close to it.</p>
+<p>$$
+w := w - \alpha{\partial J(w,b) \over \partial w} \newline
+b := b - \alpha{\partial J(w,b) \over \partial b}
+$$</p>
+<p>where alpha means the <strong>learning rate</strong> and in code we just use <font color=red><strong>dw</strong></font> to donate the partial derivative, representing how much the cost function <strong>slopes</strong> in the <em>w</em> direction:</p>
+<p>$$
+\partial J(w) \over \partial w
+$$</p>
+<p>therefore the iteration is coded as follows,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">w</span> <span class="o">=</span> <span class="n">w</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dw</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">bs</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">db</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>If</p>
+<p>$$
+z \rightleftarrows a = \sigma(z) \rightleftarrows \ell(a,y)
+$$</p>
+<p>then</p>
+<p>$$
+{\partial{\ell(a,y)} \over \partial{a}} = {\partial{(-yloga - (1-y)log(1-a))} \over \partial{a}} = {-y \over a} + {1-y \over 1-a} \newline
+{\partial{\ell(a,y)} \over \partial{z}} = {\partial{\ell(a,y)} \over {\partial{a}}} * {da \over dz} = a - y
+$$</p>
+<p>Let me explain how this worked out.</p>
+<p>Suppose</p>
+<p>$$
+f(z) = {1 \over a} = 1 + e^{-z} \newline
+$$</p>
+<p>then</p>
+<p>$$
+\tag{1} f&rsquo;(z) = ({1 \over a})&rsquo; = - {a&rsquo; \over a^2}
+$$</p>
+<p>$$
+\tag{2} f&rsquo;(z) = (1 + e^{-z})&rsquo; = (e^{-z})&rsquo; = -e^{-z} = 1 - f(z) = 1 - {1 \over a}
+$$</p>
+<p>so</p>
+<p>$$
+{a&rsquo; \over a^2} = {1 - a \over a} \implies a&rsquo; = a(1-a) \newline
+where \quad a&rsquo; = {da \over dz}
+$$</p>
+<p>therefore</p>
+<p>$$
+{\partial{\ell(a,y)} \over \partial(z)} = ({-y \over a} + {1-y \over 1-a}) * a(1-a) = a - y
+$$</p>
+<p><strong>Done!</strong></p>
+<h3 id="m-examples"><em>m</em> examples</h3>
+<p>Recap:</p>
+<p>$$
+J(w,b) = {1 \over m}\sum_{i=1}^m{\ell(a^{(i)},y^{(i)})} \newline
+{\partial{J(w,b)} \over \partial{w_1}} = {1 \over m}\sum_{i=1}^m{\partial{\ell(a^{(i)},y^{(i)})} \over \partial{w_1^{(i)}}} \newline
+&hellip;
+$$</p>
+<p>Translated in pseudo code:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">J</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dw_1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dw_2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">db</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">m</span><span class="p">:</span>
+    <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">W</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">J</span> <span class="o">+=</span> <span class="o">-</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="n">log</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span>
+    <span class="n">dz</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="c1"># suppose only have 2 parameters &#39;w&#39; here</span>
+    <span class="n">dw1</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">dz</span>
+    <span class="n">dw2</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">dz</span>
+    <span class="n">db</span> <span class="o">+=</span> <span class="n">dz</span>
+<span class="n">J</span> <span class="o">/=</span> <span class="n">m</span>
+<span class="n">dw1</span> <span class="o">/=</span> <span class="n">m</span>
+<span class="n">dw2</span> <span class="o">/=</span> <span class="n">m</span>
+<span class="n">db</span> <span class="o">/=</span> <span class="n">m</span>
+<span class="c1"># update params</span>
+<span class="n">W</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dw1</span>
+<span class="n">W</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dw2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">db</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>But the explicit for-loop is very inefficient! <font color=red><strong>Vectorization</strong></font> should be used in programming!</p>
+<br/>
+<h2 id="vectorization">Vectorization</h2>
+<p><em>Vectorization is the art of getting rid of the explicit for-loops in your code.</em></p>
+<p>E.g.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Both GPU &amp; CPU have the parallelization instructions, also known as SIMD (<em>i.e. single instruction multi-data</em>) instructions. If you use the built-in functions such as np.function (<em>e.g. np.dot, np.exp, np.log, np.abs, np.maximum, .etc</em>), it enables Python numpy to take much better advantage of parallelism, to make your computation much faster.</p>
+<p>Try this code block to feel:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span>
+<span class="c1"># vectorization</span>
+<span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">toc</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;vec: &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1000</span><span class="o">*</span><span class="p">(</span><span class="n">toc</span><span class="o">-</span><span class="n">tic</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&#34;ms&#34;</span><span class="p">)</span>
+<span class="c1"># for-loop</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">toc</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;loop: &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1000</span><span class="o">*</span><span class="p">(</span><span class="n">toc</span><span class="o">-</span><span class="n">tic</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&#34;ms&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Whenever possible, avoid explicit for-loops!</strong></p>
+<p>Let&rsquo;s update the code block of vectorization version to remove the inner loop of parameters.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">J</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nx</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">db</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">m</span><span class="p">:</span>
+    <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">W</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">J</span> <span class="o">+=</span> <span class="o">-</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="n">log</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span>
+    <span class="n">dz</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">dw</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dz</span>
+    <span class="n">db</span> <span class="o">+=</span> <span class="n">dz</span>
+<span class="n">J</span> <span class="o">/=</span> <span class="n">m</span>
+<span class="n">dw</span> <span class="o">/=</span> <span class="n">m</span>
+<span class="n">db</span> <span class="o">/=</span> <span class="n">m</span>
+<span class="c1"># update params</span>
+<span class="n">W</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dw</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">db</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="further-vectorization">Further vectorization</h3>
+<p>$$
+Z = [Z^{(1)}, Z^{(2)}, &hellip;, Z^{(m)}] = W^TX + [b, b, &hellip;, b] = [W^Tx^{(1)}+b, W^Tx^{(2)}+b, &hellip;, W^Tx^{(m)}+b] \newline
+Z = np.dot(W.T, X) + b
+$$</p>
+<p>where <em>b</em> will be <strong>broadcasted</strong> automatically by numpy.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># remove the outer loop of m amount of examples</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+<span class="n">dZ</span> <span class="o">=</span> <span class="n">A</span> <span class="o">-</span> <span class="n">Y</span>
+<span class="n">db</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">m</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dZ</span><span class="p">)</span>
+<span class="n">dw</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">m</span> <span class="o">*</span> <span class="n">X</span> <span class="o">*</span> <span class="n">dZ</span><span class="o">.</span><span class="n">T</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">w</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dw</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">db</span>
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<h2 id="a-note-on-pythonnumpy-vectors">A note on python/numpy vectors</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="c1"># create five random Gaussian variables stored in array a</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1"># a.shape print as (5,) meaning it&#39;s an array with rank = 1</span>
+<span class="c1"># saying that a is neight a row vector nor a column one</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="c1"># dot product will result into a number</span>
+<span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+<span class="c1"># create a column vector, size = (5,1)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="c1"># dot product will get a matrix as a result of vectors&#39; outer product</span>
+<span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>Don&rsquo;t use the rank 1 array.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># column vector</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>&lsquo;assert&rsquo; to make sure of the desired shape. For example,</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">assert</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># serves as documentation for your code</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>User <em>reshape</em> to transform rank 1 array to vector.</li>
+</ol>
+<br/>
+<h2 id="logistic-regression-explanation">Logistic Regression Explanation</h2>
+<p>Since</p>
+<p>$$
+p(y=1|x) = \hat{y}
+$$</p>
+<p>then</p>
+<p>$$
+If ;y=1: \quad p(y|x) = \hat{y} \newline
+If ;y=0: \quad p(y|x) = 1 - \hat{y}
+$$</p>
+<p>so</p>
+<p>$$
+p(y|x) = \hat{y}^{y}(1-\hat{y})^{(1-y)}
+$$</p>
+<p>Because the <em>log</em> function is a strictly monotonically increasing function, you&rsquo;re maximizing <em>log(p(y|x))</em> give you similar result that is optimizing <em>p(y|x)</em>.</p>
+<p>Therefore</p>
+<p>$$
+logP(y|x) = ylog\hat{y} + (1-y)log(1-\hat{y}) = -\ell(\hat{y}, y)
+$$</p>
+<p>As shown above, to minimize the loss value equals maximizing the probability of P(y|x).</p>
+<p>Assume the training examples are independent and identically distributed (IID, 独立同分布).</p>
+<p>$$
+logP(Y|X) = log\prod_{i=1}^{m}P(y^{(i)}|x^{(i)}) = \sum_{i=1}^{m}
+$$</p>
+<p>In statistics, there&rsquo;s a principle called <strong>Maximum Likelihood Estimation</strong>, which just means to choose the parameters that maximize things like <em>logP(Y|X)</em> here. In other words, our goal is to minimize the cost.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ivan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-05-31
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/neural-network/">neural network</a>
+          <a href="/tags/theory/">theory</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/deeplearning/basic_concept/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Understanding of Iteration, Batch and Epoch</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/deeplearning/andrew_01_intro/">
+            <span class="next-text nav-default">[Course] Introduction to Deep Learning</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="https://xavilv.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>Ivan</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
