@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://xavilv.github.io/sitemap.xml

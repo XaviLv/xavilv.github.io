@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Even - A super concise theme for Hugo</title>
+    <link>https://xavilv.github.io/tags/</link>
+    <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Aug 2020 01:37:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://xavilv.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>annotation</title>
+      <link>https://xavilv.github.io/tags/annotation/</link>
+      <pubDate>Sun, 30 Aug 2020 01:37:56 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/tags/annotation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://xavilv.github.io/tags/test/</link>
+      <pubDate>Sun, 30 Aug 2020 01:37:56 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neural network</title>
+      <link>https://xavilv.github.io/tags/neural-network/</link>
+      <pubDate>Sun, 07 Jul 2019 10:57:10 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/tags/neural-network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theory</title>
+      <link>https://xavilv.github.io/tags/theory/</link>
+      <pubDate>Sun, 07 Jul 2019 10:57:10 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/tags/theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>matplotlib</title>
+      <link>https://xavilv.github.io/tags/matplotlib/</link>
+      <pubDate>Sun, 30 Jun 2019 14:47:10 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>https://xavilv.github.io/tags/tensorflow/</link>
+      <pubDate>Mon, 24 Jun 2019 22:47:10 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
