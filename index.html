@@ -112,41 +112,20 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/first/">First</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-11-27 </span>
-      
-        <span class="more-meta"> 7 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      hello hugo  aaa bbb  hugo start guide
-    </div>
-    <div class="read-more">
-      <a href="/post/first/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/math/annotation/">Math Annotations</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/math/annotation/">Math Example - mathjax</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-08-30 </span>
-      <div class="post-category">
-          <a href="/categories/math/"> Math </a>
-          </div>
-        <span class="more-meta"> 7 words </span>
-        <span class="more-meta"> 1 min read </span>
+      
+        <span class="more-meta"> 241 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      this is a page about math annotation
+      New line $$ \begin{aligned} aa = bb \newline cc = dd \end{aligned} $$
+1 2 3 4 5 6 7 8  $$ \displaylines{aa = bb \\\\\ cc = dd} $$ $$ \begin{aligned} aa = bb \newline cc = dd \end{aligned} $$   Inline this is a inline formula, $Wx + b = y$
+1  $Wx + b = y$   Matrix $$X = \begin{bmatrix} | &amp; | &amp; &hellip; &amp; | \cr x^{(1)} &amp; x^{(2)} &amp; &hellip; &amp; x^{(m)} \cr | &amp; | &amp; &hellip; &amp; | \end{bmatrix} \quad X\in\mathbb{R}^{n_x*m} $$
     </div>
     <div class="read-more">
       <a href="/post/math/annotation/" class="read-more-link">Read more...</a>
@@ -221,6 +200,29 @@
   </div>
 </article>
 
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/deeplearning/basic_concept/">Understanding of Iteration, Batch and Epoch</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-06-24 </span>
+      <div class="post-category">
+          <a href="/categories/algorithm/"> Algorithm </a>
+          </div>
+        <span class="more-meta"> 261 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Make clear of the differences of the fundamental concept, iteration, batch, mini-batch and epoch.
+    </div>
+    <div class="read-more">
+      <a href="/post/deeplearning/basic_concept/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     </section>
   
   <nav class="pagination">
@@ -279,6 +281,14 @@
 
 
 <script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

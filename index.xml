@@ -12,21 +12,14 @@
     
     
     <item>
-      <title>First</title>
-      <link>https://xavilv.github.io/post/first/</link>
-      <pubDate>Fri, 27 Nov 2020 07:32:37 +0800</pubDate>
-      
-      <guid>https://xavilv.github.io/post/first/</guid>
-      <description>hello hugo  aaa bbb  hugo start guide</description>
-    </item>
-    
-    <item>
-      <title>Math Annotations</title>
+      <title>Math Example - mathjax</title>
       <link>https://xavilv.github.io/post/math/annotation/</link>
       <pubDate>Sun, 30 Aug 2020 01:37:56 +0800</pubDate>
       
       <guid>https://xavilv.github.io/post/math/annotation/</guid>
-      <description>this is a page about math annotation</description>
+      <description>New line $$ \begin{aligned} aa = bb \newline cc = dd \end{aligned} $$
+1 2 3 4 5 6 7 8  $$ \displaylines{aa = bb \\\\\ cc = dd} $$ $$ \begin{aligned} aa = bb \newline cc = dd \end{aligned} $$   Inline this is a inline formula, $Wx + b = y$
+1  $Wx + b = y$   Matrix $$X = \begin{bmatrix} | &amp;amp; | &amp;amp; &amp;hellip; &amp;amp; | \cr x^{(1)} &amp;amp; x^{(2)} &amp;amp; &amp;hellip; &amp;amp; x^{(m)} \cr | &amp;amp; | &amp;amp; &amp;hellip; &amp;amp; | \end{bmatrix} \quad X\in\mathbb{R}^{n_x*m} $$</description>
     </item>
     
     <item>
