@@ -37,7 +37,7 @@
   </url>
   
   <url>
-    <loc>https://xavilv.github.io/categories/algorithm/</loc>
+    <loc>https://xavilv.github.io/categories/andrewng/</loc>
     <lastmod>2019-07-07T10:57:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://xavilv.github.io/tags/theory/</loc>
-    <lastmod>2019-07-07T10:57:10+08:00</lastmod>
+    <loc>https://xavilv.github.io/post/deeplearning/andrew_03_shallow_nn/</loc>
+    <lastmod>2019-06-30T17:17:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://xavilv.github.io/post/deeplearning/andrew_03_shallow_nn/</loc>
+    <loc>https://xavilv.github.io/tags/theory/</loc>
     <lastmod>2019-06-30T17:17:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -81,13 +81,6 @@
   <url>
     <loc>https://xavilv.github.io/post/engineering/matplotlib/</loc>
     <lastmod>2019-06-30T14:47:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://xavilv.github.io/tags/tensorflow/</loc>
-    <lastmod>2019-06-24T22:47:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

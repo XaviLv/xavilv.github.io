@@ -12,18 +12,16 @@
     
     
     <item>
-      <title>Math Example - mathjax</title>
+      <title>Math Examples - mathjax</title>
       <link>https://xavilv.github.io/post/math/annotation/</link>
       <pubDate>Sun, 30 Aug 2020 01:37:56 +0800</pubDate>
       
       <guid>https://xavilv.github.io/post/math/annotation/</guid>
-      <description>New line $$ \begin{aligned} aa = bb \newline cc = dd \end{aligned} $$
-1 2 3 4 5 6 7 8  $$ \displaylines{aa = bb \\\\\ cc = dd} $$ $$ \begin{aligned} aa = bb \newline cc = dd \end{aligned} $$   Inline this is a inline formula, $Wx + b = y$
-1  $Wx + b = y$   Matrix $$X = \begin{bmatrix} | &amp;amp; | &amp;amp; &amp;hellip; &amp;amp; | \cr x^{(1)} &amp;amp; x^{(2)} &amp;amp; &amp;hellip; &amp;amp; x^{(m)} \cr | &amp;amp; | &amp;amp; &amp;hellip; &amp;amp; | \end{bmatrix} \quad X\in\mathbb{R}^{n_x*m} $$</description>
+      <description>An example set of mathematic annotations.</description>
     </item>
     
     <item>
-      <title>[Course] Deep-L Layer Neural Network</title>
+      <title>[Course] DL Neural Network</title>
       <link>https://xavilv.github.io/post/deeplearning/andrew_04_deep_nn/</link>
       <pubDate>Sun, 07 Jul 2019 10:57:10 +0800</pubDate>
       
