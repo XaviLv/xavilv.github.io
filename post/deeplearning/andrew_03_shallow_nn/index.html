@@ -123,7 +123,7 @@
       <div class="post-meta">
         <span class="post-time"> 2019-06-30 </span>
         <div class="post-category">
-            <a href="/categories/algorithm/"> Algorithm </a>
+            <a href="/categories/andrewng/"> AndrewNG </a>
             </div>
           <span class="more-meta"> 916 words </span>
           <span class="more-meta"> 5 mins read </span>
@@ -157,13 +157,13 @@ z^{[1]} = w^{[1]}x + b^{[1]}
 $$</p>
 <h2 id="neural-network-representation">Neural Network Representation</h2>
 <p>As demonstrated in the image below, when talking about the count of layers in a neural network, the <strong>input layer</strong> is not involved.</p>
-<p><img src="/images/blog/deeplearning/2_layer_nn.png" alt="Fig. Two Layer Neural Network"></p>
+<p><img src="/img/deeplearning/2_layer_nn.png" alt="Fig. Two Layer Neural Network"></p>
 <p>Each circle(node) in a layer represents two steps of computation.</p>
 <ul>
 <li>Linear: compute <font color=red><strong>z</strong></font></li>
 <li>Non-linear: compute the <font color=red><strong>activation</strong></font> as the sigmoid function of <strong>z</strong></li>
 </ul>
-<p><img src="/images/blog/deeplearning/node_detail.png" alt="Fig. Inside Node"></p>
+<p><img src="/img/deeplearning/node_detail.png" alt="Fig. Inside Node"></p>
 <p>So, as in this example, we can do the following calculations to carry out the whole process.</p>
 <p>$$
 z_1^{[1]} = w_1^{[1]T}x + b_1^{[1]} \quad a_1^{[1]} = \sigma(z_1^{[1]}) \newline
@@ -231,14 +231,14 @@ $$</p>
 <font size=4>**Tanh & Sigmoid**</font>
 <p><font color=red size=4>tanh</font> almost always works <em>better</em>* than <font color=red>sigmoid</font> as an activation function. Because with values between +1 and -1, the mean of the activations that come out of your head is closer to having a zero mean.</p>
 <p>Sometimes when you training the algorithm, you might center the data and have your data have zero mean. Using <em>tanh</em> instead of <em>sigmoid</em> kind of having the effect of centering your data, which actually makes learning for the next layer much easier.</p>
-<p><img src="/images/blog/deeplearning/sigmoid_func.png" alt="$$ a = tanh(z) = {e^{z} - e^{-z} \over e^{z} + e^{-z}} $$"></p>
+<p><img src="/img/deeplearning/sigmoid_func.png" alt="$$ a = tanh(z) = {e^{z} - e^{-z} \over e^{z} + e^{-z}} $$"></p>
 <p>One exception is that when you&rsquo;re using binary classification, in which case you might use the <em>sigmoid</em> activation function for the output layer.</p>
 <p><img src="/images/blog/deeplearning/tanh_func.png" alt="$$ a = sigma(z) = {1 \over 1 + e^{-z}} $$"></p>
 <p><font color=orange>**Downside:**</font> If <em>z</em> is either very large or very small, the gradient of the derivative or the slope of this function becomes very small, close to zero. So this would slow down the gradient descent.</p>
 <br/>
 <font size=4>**ReLU (Rectified Linear Unit)**</font>
 <p>The slope or derivative is 1 when z is positive and 0 when it&rsquo;s not.</p>
-<p><img src="/images/blog/deeplearning/ReLU_func.png" alt="$$ a = ReLU(z) = max(0, z) $$"></p>
+<p><img src="/img/deeplearning/ReLU_func.png" alt="$$ a = ReLU(z) = max(0, z) $$"></p>
 <br/>
 <font size=4>**Rules of Thumb**</font>
 <p>If your output is 0 or 1, meaning you&rsquo;re doing the binary classification, the sigmoid function is very natural for the output layer. And then for all the hidden units <em>ReLU</em> is increasingly the default choice of the activation function.</p>
@@ -246,7 +246,7 @@ $$</p>
 <p>For half of the range of z, the slope of <em>ReLU</em> is zero, but in practice enough of your hidden units will have z greater than zero. So learning can still be quite fast for most training examples.</p>
 <br/>
 <h2 id="gradient-descent-for-nn-backpropagation">Gradient Descent for NN (<em>backpropagation</em>)</h2>
-<p><img src="/images/blog/deeplearning/logistic_regression.png" alt="Logistic Regression"></p>
+<p><img src="/img/deeplearning/logistic_regression.png" alt="Logistic Regression"></p>
 <p>When we talk about the logistic regression, we have this ,<font color=red><strong>forward pass</strong></font> where we compute <em>z</em>, then <em>a</em>, then the loss. And then to take the derivatives, we have this <font color=green><strong>backward pass</strong></font> where we could first compute <em>da</em>, then go on to <em>dz</em>, and then <em>dw</em>, <em>db</em>.</p>
 <p>The definition for the loss was,</p>
 <p>$$
@@ -265,7 +265,7 @@ $$</p>
 <br/>
 <h2 id="random-initialization">Random Initialization</h2>
 <p>When training a neural network, it is important to initialize the parameters randomly. Otherwise, no matter how long you train the network, all hidden units are still computing the same function all the time. So in this case, there is really no point of having more than one hidden units.</p>
-<p><img src="/images/blog/deeplearning/2_layer_nn_2.png" alt="shallow network"></p>
+<p><img src="/img/deeplearning/2_layer_nn_2.png" alt="shallow network"></p>
 <p>Take this network above as an example,</p>
 <p>$$
 w^{[1]} = np.random.randn(2,2) * 0.01 \newline
@@ -300,7 +300,7 @@ $$</p>
       <nav class="post-nav">
         <a class="prev" href="/post/deeplearning/andrew_04_deep_nn/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">[Course] Deep-L Layer Neural Network</span>
+            <span class="prev-text nav-default">[Course] DL Neural Network</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         <a class="next" href="/post/engineering/matplotlib/">
