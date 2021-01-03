@@ -3,14 +3,63 @@
   
   <url>
     <loc>https://xavilv.github.io/categories/</loc>
-    <lastmod>2020-08-30T01:37:56+08:00</lastmod>
+    <lastmod>2021-01-02T22:34:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://xavilv.github.io/categories/engineering/</loc>
-    <lastmod>2020-08-30T01:37:56+08:00</lastmod>
+    <lastmod>2021-01-02T22:34:57+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/post/</loc>
+    <lastmod>2021-01-02T22:34:57+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/post/engineering/vscode_note/</loc>
+    <lastmod>2021-01-02T22:34:57+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/tags/github/</loc>
+    <lastmod>2021-01-02T22:32:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/post/engineering/github_note/</loc>
+    <lastmod>2021-01-02T22:32:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/tags/</loc>
+    <lastmod>2021-01-02T22:32:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/post/kaggle/hello_kaggle/</loc>
+    <lastmod>2020-12-13T09:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/categories/kaggle/</loc>
+    <lastmod>2020-12-13T09:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,20 +73,6 @@
   
   <url>
     <loc>https://xavilv.github.io/post/engineering/annotation/</loc>
-    <lastmod>2020-08-30T01:37:56+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://xavilv.github.io/post/</loc>
-    <lastmod>2020-08-30T01:37:56+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://xavilv.github.io/tags/</loc>
     <lastmod>2020-08-30T01:37:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -12,6 +12,33 @@
     
     
     <item>
+      <title>Visual Code Cheatsheet</title>
+      <link>https://xavilv.github.io/post/engineering/vscode_note/</link>
+      <pubDate>Sat, 02 Jan 2021 22:34:57 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/post/engineering/vscode_note/</guid>
+      <description>Tooltips about vscode.</description>
+    </item>
+    
+    <item>
+      <title>Github Cheatsheet</title>
+      <link>https://xavilv.github.io/post/engineering/github_note/</link>
+      <pubDate>Sat, 02 Jan 2021 22:32:51 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/post/engineering/github_note/</guid>
+      <description>Tooltips about github.</description>
+    </item>
+    
+    <item>
+      <title>Hello Kaggle</title>
+      <link>https://xavilv.github.io/post/kaggle/hello_kaggle/</link>
+      <pubDate>Sun, 13 Dec 2020 09:07:00 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/post/kaggle/hello_kaggle/</guid>
+      <description>Begin this journey with Kaggle!</description>
+    </item>
+    
+    <item>
       <title>Math Examples - mathjax</title>
       <link>https://xavilv.github.io/post/engineering/annotation/</link>
       <pubDate>Sun, 30 Aug 2020 01:37:56 +0800</pubDate>

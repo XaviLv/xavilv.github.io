@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Aug 2020 01:37:56 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 Jan 2021 22:34:57 +0800</lastBuildDate>
     
 	<atom:link href="https://xavilv.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Engineering</title>
       <link>https://xavilv.github.io/categories/engineering/</link>
-      <pubDate>Sun, 30 Aug 2020 01:37:56 +0800</pubDate>
+      <pubDate>Sat, 02 Jan 2021 22:34:57 +0800</pubDate>
       
       <guid>https://xavilv.github.io/categories/engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kaggle</title>
+      <link>https://xavilv.github.io/categories/kaggle/</link>
+      <pubDate>Sun, 13 Dec 2020 09:07:00 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/categories/kaggle/</guid>
       <description></description>
     </item>
     
