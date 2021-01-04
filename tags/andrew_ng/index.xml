@@ -6,11 +6,7 @@
     <description>Recent content in andrew_ng on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Jul 2019 10:57:10 +0800</lastBuildDate>
-    
-	<atom:link href="https://xavilv.github.io/tags/andrew_ng/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 07 Jul 2019 10:57:10 +0800</lastBuildDate><atom:link href="https://xavilv.github.io/tags/andrew_ng/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Course] DL Neural Network</title>
       <link>https://xavilv.github.io/post/deeplearning/andrew_04_deep_nn/</link>

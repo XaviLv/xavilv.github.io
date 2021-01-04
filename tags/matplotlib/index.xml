@@ -6,11 +6,7 @@
     <description>Recent content in matplotlib on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Jun 2019 14:47:10 +0800</lastBuildDate>
-    
-	<atom:link href="https://xavilv.github.io/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 30 Jun 2019 14:47:10 +0800</lastBuildDate><atom:link href="https://xavilv.github.io/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Matplotlib Samples</title>
       <link>https://xavilv.github.io/post/engineering/matplotlib/</link>

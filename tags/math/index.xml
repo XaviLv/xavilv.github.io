@@ -6,11 +6,7 @@
     <description>Recent content in math on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Aug 2020 01:37:56 +0800</lastBuildDate>
-    
-	<atom:link href="https://xavilv.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 30 Aug 2020 01:37:56 +0800</lastBuildDate><atom:link href="https://xavilv.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Math Examples - mathjax</title>
       <link>https://xavilv.github.io/post/engineering/annotation/</link>

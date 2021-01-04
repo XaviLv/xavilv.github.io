@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.65.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://xavilv.github.io/post/engineering/vscode_note/" />
@@ -47,13 +47,14 @@
 <meta property="article:modified_time" content="2021-01-02T22:34:57+08:00" />
 <meta itemprop="name" content="Visual Code Cheatsheet">
 <meta itemprop="description" content="Tooltips about vscode.">
-<meta itemprop="datePublished" content="2021-01-02T22:34:57&#43;08:00" />
-<meta itemprop="dateModified" content="2021-01-02T22:34:57&#43;08:00" />
-<meta itemprop="wordCount" content="130">
+<meta itemprop="datePublished" content="2021-01-02T22:34:57+08:00" />
+<meta itemprop="dateModified" content="2021-01-02T22:34:57+08:00" />
+<meta itemprop="wordCount" content="152">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Visual Code Cheatsheet"/>
 <meta name="twitter:description" content="Tooltips about vscode."/>
 
@@ -125,7 +126,7 @@
         <div class="post-category">
             <a href="/categories/engineering/"> Engineering </a>
             </div>
-          <span class="more-meta"> 130 words </span>
+          <span class="more-meta"> 152 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -136,26 +137,21 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#adding-file-header">Adding File Header</a>
-      <ul>
-        <li><a href="#1-open-vscode--preferences--user-snippets">1. Open VScode / Preferences / User Snippets</a></li>
-        <li><a href="#2-new-a-snippets">2. New a snippets</a></li>
-        <li><a href="#3-edit-content-like-this-for-example-a-markdown-file">3. Edit content like this, for example a markdown file.</a></li>
-        <li><a href="#4-import-the-file-header-in-a-new-file-by-typing-fileheader">4. Import the file header in a new file by typing <code>fileheader</code>.</a></li>
-      </ul>
-    </li>
+    <li><a href="#adding-file-header">Adding File Header</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <h1 id="adding-file-header">Adding File Header</h1>
-<p>Normally if you create a new file like <code>*.py</code> or <code>*.md</code>, it&rsquo;s better to have the file header added automatically. Fortunately most IDEs can do this, including VS Code of course.</p>
-<h2 id="1-open-vscode--preferences--user-snippets">1. Open VScode / Preferences / User Snippets</h2>
-<p><img src="/img/engineering/vscode-user_snippets.png" alt="user snippets"></p>
-<h2 id="2-new-a-snippets">2. New a snippets</h2>
-<p><img src="/img/engineering/new_snippets.png" alt="new_snippets"></p>
-<h2 id="3-edit-content-like-this-for-example-a-markdown-file">3. Edit content like this, for example a markdown file.</h2>
+<p>Normally if you create a new file like <code>*.py</code> or <code>*.md</code>, it&rsquo;s better to have the file header added automatically. Fortunately most IDEs can do this. In VS Code it&rsquo;s easy by the help of <code>User Snippets</code>.</p>
+<p><strong>1. Edit settings.json</strong></p>
+<p><code>Ctrl + P</code> to open settings.json, then add <code>&quot;[markdown]&quot;:{&quot;editor.quickSuggestions&quot;: true}</code> in json body.</p>
+<p><strong>2. Open VScode / Preferences / User Snippets</strong></p>
+<div align="center"><img src="/img/engineering/vscode-user_snippets.png" width="60%" height="60%" alt="user_snippets"/></div>
+<p><strong>3. New a snippets</strong></p>
+<div align="center"><img src="/img/engineering/new_snippets.png" width="60%" height="60%" alt="new_snippets"/></div>
+<p><strong>4. Edit content like this, for example a markdown file.</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -194,11 +190,10 @@
 	<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="4-import-the-file-header-in-a-new-file-by-typing-fileheader">4. Import the file header in a new file by typing <code>fileheader</code>.</h2>
-<p><img src="/img/engineering/type-file_header.png" alt="type_fileheader"></p>
+</div><p><strong>5. Import the file header in a new file by typing <code>fileheader</code>.</strong></p>
+<div align="center"><img src="/img/engineering/type-file_header.png" width="60%" height="60%" alt="type_fileheader"/></div>
 <p>Then you would got something like this, bravo!</p>
-<p><img src="/img/engineering/file_header_example.png" alt="fileheader"></p>
-
+<div align="center"><img src="/img/engineering/file_header_example.png" width="60%" height="60%" alt="fileheader"/></div>
     </div>
 
     <div class="post-copyright">
@@ -219,7 +214,11 @@
 <footer class="post-footer">
       
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/its_all_relative/right_way_to_learn/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">学习真的没有“捷径”吗？</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/engineering/github_note/">
             <span class="next-text nav-default">Github Cheatsheet</span>
             <span class="next-text nav-mobile">Next</span>

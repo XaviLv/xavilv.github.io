@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.65.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://xavilv.github.io/post/deeplearning/andrew_03_shallow_nn/" />
@@ -47,13 +47,14 @@
 <meta property="article:modified_time" content="2019-06-30T17:17:10+08:00" />
 <meta itemprop="name" content="[Course] Shallow Neural Network">
 <meta itemprop="description" content="In this article we will talk about the shallow neural network (one layer)&hellip;">
-<meta itemprop="datePublished" content="2019-06-30T17:17:10&#43;08:00" />
-<meta itemprop="dateModified" content="2019-06-30T17:17:10&#43;08:00" />
+<meta itemprop="datePublished" content="2019-06-30T17:17:10+08:00" />
+<meta itemprop="dateModified" content="2019-06-30T17:17:10+08:00" />
 <meta itemprop="wordCount" content="916">
 
 
 
-<meta itemprop="keywords" content="andrew_ng," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="andrew_ng," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Course] Shallow Neural Network"/>
 <meta name="twitter:description" content="In this article we will talk about the shallow neural network (one layer)&hellip;"/>
 
@@ -166,8 +167,8 @@ $$</p>
 <p><img src="/img/deeplearning/node_detail.png" alt="Fig. Inside Node"></p>
 <p>So, as in this example, we can do the following calculations to carry out the whole process.</p>
 <p>$$
-z_1^{[1]} = w_1^{[1]T}x + b_1^{[1]} \quad a_1^{[1]} = \sigma(z_1^{[1]}) \newline
-z_2^{[1]} = w_2^{[1]T}x + b_2^{[1]} \quad a_2^{[1]} = \sigma(z_2^{[1]}) \newline
+z_1^{[1]} = w_1^{[1]T}x + b_1^{[1]} \quad a_1^{[1]} = \sigma(z_1^{[1]}) \newline 
+z_2^{[1]} = w_2^{[1]T}x + b_2^{[1]} \quad a_2^{[1]} = \sigma(z_2^{[1]}) \newline 
 &hellip;
 $$</p>
 <p>In order to accelerate the calculation, we should take advantage of the <strong>vectorization</strong> technique, instead of manually looping.</p>
@@ -182,18 +183,18 @@ z_1^{[1]} \cr
 z_2^{[1]} \cr
 z_3^{[1]} \cr
 z_4^{[1]}
-\end{bmatrix} =
+\end{bmatrix} = 
 \begin{bmatrix}
 &mdash;&mdash; w_1^{[1]T} &mdash;&mdash; \cr
 &mdash;&mdash; w_2^{[1]T} &mdash;&mdash; \cr
 &mdash;&mdash; w_3^{[1]T} &mdash;&mdash; \cr
 &mdash;&mdash; w_4^{[1]T} &mdash;&mdash;
-\end{bmatrix}
+\end{bmatrix} 
 \begin{bmatrix}
 x_1 \cr
 x_2 \cr
 x_3
-\end{bmatrix} +
+\end{bmatrix} + 
 \begin{bmatrix}
 b_1^{[1]} \cr
 b_2^{[1]} \cr
@@ -206,7 +207,7 @@ $$</p>
 <br/>
 <h2 id="vectorizing-across-multiple-examples">Vectorizing across multiple examples</h2>
 <p>We define the matrix <em>X</em> to be equal to our <em>m</em> training examples stacked up in these <font color=red>columns</font> like below. So the horizontal index corresponds to different training examples. As you sweep through from left to right, you&rsquo;re scanning through the training set. And vertically, the vertical index corresponds to different nodes (i.e. hidden units) in the neural network.</p>
-<p>$$ X =
+<p>$$ X = 
 \begin{bmatrix}
 | &amp; | &amp;  &amp; | \cr
 x^{(1)} &amp; x^{(2)} &amp; &hellip; &amp; x^{(m)} \cr
@@ -216,7 +217,7 @@ $$</p>
 <p>where, $$ X.shape = (n_x, m)$$</p>
 <p>And the <em>n-subscript-x</em> means the dimension of each sample feature vector.</p>
 <p>Similarly,</p>
-<p>$$ A^{[1]} =
+<p>$$ A^{[1]} = 
 \begin{bmatrix}
 | &amp; | &amp;  &amp; | \cr
 a^{<a href="1">1</a>} &amp; a^{<a href="2">1</a>} &amp; &hellip; &amp; a^{<a href="m">1</a>} \cr
@@ -234,7 +235,7 @@ $$</p>
 <p><img src="/img/deeplearning/sigmoid_func.png" alt="$$ a = tanh(z) = {e^{z} - e^{-z} \over e^{z} + e^{-z}} $$"></p>
 <p>One exception is that when you&rsquo;re using binary classification, in which case you might use the <em>sigmoid</em> activation function for the output layer.</p>
 <p><img src="/images/blog/deeplearning/tanh_func.png" alt="$$ a = sigma(z) = {1 \over 1 + e^{-z}} $$"></p>
-<p><font color=orange>**Downside:**</font> If <em>z</em> is either very large or very small, the gradient of the derivative or the slope of this function becomes very small, close to zero. So this would slow down the gradient descent.</p>
+<p><font color=orange><strong>Downside:</strong></font> If <em>z</em> is either very large or very small, the gradient of the derivative or the slope of this function becomes very small, close to zero. So this would slow down the gradient descent.</p>
 <br/>
 <font size=4>**ReLU (Rectified Linear Unit)**</font>
 <p>The slope or derivative is 1 when z is positive and 0 when it&rsquo;s not.</p>
@@ -242,7 +243,7 @@ $$</p>
 <br/>
 <font size=4>**Rules of Thumb**</font>
 <p>If your output is 0 or 1, meaning you&rsquo;re doing the binary classification, the sigmoid function is very natural for the output layer. And then for all the hidden units <em>ReLU</em> is increasingly the default choice of the activation function.</p>
-<p><font color=orange>**Downside:**</font> The derivative is equal to zero when z is negative. There is another version called <em>Leaky ReLU</em>, which is usually better than <em>ReLU</em> although not used as much in practice.</p>
+<p><font color=orange><strong>Downside:</strong></font> The derivative is equal to zero when z is negative. There is another version called <em>Leaky ReLU</em>, which is usually better than <em>ReLU</em> although not used as much in practice.</p>
 <p>For half of the range of z, the slope of <em>ReLU</em> is zero, but in practice enough of your hidden units will have z greater than zero. So learning can still be quite fast for most training examples.</p>
 <br/>
 <h2 id="gradient-descent-for-nn-backpropagation">Gradient Descent for NN (<em>backpropagation</em>)</h2>

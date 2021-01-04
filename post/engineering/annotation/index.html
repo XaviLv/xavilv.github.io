@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.65.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://xavilv.github.io/post/engineering/annotation/" />
@@ -47,13 +47,14 @@
 <meta property="article:modified_time" content="2020-08-30T01:37:56+08:00" />
 <meta itemprop="name" content="Math Examples - mathjax">
 <meta itemprop="description" content="An example set of mathematic annotations.">
-<meta itemprop="datePublished" content="2020-08-30T01:37:56&#43;08:00" />
-<meta itemprop="dateModified" content="2020-08-30T01:37:56&#43;08:00" />
+<meta itemprop="datePublished" content="2020-08-30T01:37:56+08:00" />
+<meta itemprop="dateModified" content="2020-08-30T01:37:56+08:00" />
 <meta itemprop="wordCount" content="241">
 
 
 
-<meta itemprop="keywords" content="math," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="math," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Math Examples - mathjax"/>
 <meta name="twitter:description" content="An example set of mathematic annotations."/>
 
@@ -193,11 +194,11 @@ $$</p>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="matrix">Matrix</h3>
-<p>$$X =
+<p>$$X = 
 \begin{bmatrix}
 | &amp; | &amp; &hellip; &amp; | \cr
 x^{(1)} &amp; x^{(2)} &amp; &hellip; &amp; x^{(m)} \cr
-| &amp; | &amp; &hellip; &amp; |
+| &amp; | &amp; &hellip; &amp; | 
 \end{bmatrix}
 \quad X\in\mathbb{R}^{n_x*m}
 $$</p>
@@ -249,7 +250,7 @@ Output: \quad \hat{y} = \sigma(w^Tx + b)
 <p>Use the <code>&amp;</code> and <code>aligned</code> to align by the equal sign.
 $$
 \begin{aligned}
-J(w,b) &amp;= {1 \over m}\sum_{i=1}^{m}\ell(\hat{y}^{(i)}, y^{(i)}) \\
+J(w,b) &amp;= {1 \over m}\sum_{i=1}^{m}\ell(\hat{y}^{(i)}, y^{(i)}) \\ 
 &amp;= -{1 \over m}y^{(i)}\sum_{i=1}^{m}[log\hat{y}^{(i)} + (1-y^{(i)})log(1-\hat{y}^{(i)})]
 \end{aligned}
 $$</p>
