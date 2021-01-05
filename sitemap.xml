@@ -3,27 +3,48 @@
   
   <url>
     <loc>https://xavilv.github.io/categories/</loc>
-    <lastmod>2021-01-04T16:01:52+08:00</lastmod>
+    <lastmod>2021-01-05T22:47:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://xavilv.github.io/</loc>
-    <lastmod>2021-01-04T16:01:52+08:00</lastmod>
+    <loc>https://xavilv.github.io/tags/environment/</loc>
+    <lastmod>2021-01-05T22:47:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://xavilv.github.io/categories/its-all-relative/</loc>
-    <lastmod>2021-01-04T16:01:52+08:00</lastmod>
+    <loc>https://xavilv.github.io/categories/machine-learning/</loc>
+    <lastmod>2021-01-05T22:47:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/post/machine_learning/environment_install/</loc>
+    <lastmod>2021-01-05T22:47:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://xavilv.github.io/post/</loc>
+    <lastmod>2021-01-05T22:47:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/tags/</loc>
+    <lastmod>2021-01-05T22:47:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/categories/its-all-relative/</loc>
     <lastmod>2021-01-04T16:01:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -59,13 +80,6 @@
   
   <url>
     <loc>https://xavilv.github.io/post/engineering/github_note/</loc>
-    <lastmod>2021-01-02T22:32:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://xavilv.github.io/tags/</loc>
     <lastmod>2021-01-02T22:32:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -164,6 +178,13 @@
   
   <url>
     <loc>https://xavilv.github.io/about/</loc>
+    <lastmod>2019-05-27T08:54:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xavilv.github.io/</loc>
     <lastmod>2019-05-27T08:54:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

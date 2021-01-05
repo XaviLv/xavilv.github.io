@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Even - A super concise theme for Hugo</title>
+    <link>https://xavilv.github.io/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Jan 2021 22:47:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://xavilv.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ML Environment Install</title>
+      <link>https://xavilv.github.io/post/machine_learning/environment_install/</link>
+      <pubDate>Tue, 05 Jan 2021 22:47:58 +0800</pubDate>
+      
+      <guid>https://xavilv.github.io/post/machine_learning/environment_install/</guid>
+      <description>Small talks about the virtual environments during machine learing</description>
+    </item>
+    
+  </channel>
+</rss>

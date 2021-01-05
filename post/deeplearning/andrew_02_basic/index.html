@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.65.3 with theme even" />
 
 
 <link rel="canonical" href="https://xavilv.github.io/post/deeplearning/andrew_02_basic/" />
@@ -47,14 +47,13 @@
 <meta property="article:modified_time" content="2019-05-31T21:20:31+08:00" />
 <meta itemprop="name" content="[Course] Neural Network Basics">
 <meta itemprop="description" content="Some basic knowledge before openning the gate of deep learning world&hellip;">
-<meta itemprop="datePublished" content="2019-05-31T21:20:31+08:00" />
-<meta itemprop="dateModified" content="2019-05-31T21:20:31+08:00" />
+<meta itemprop="datePublished" content="2019-05-31T21:20:31&#43;08:00" />
+<meta itemprop="dateModified" content="2019-05-31T21:20:31&#43;08:00" />
 <meta itemprop="wordCount" content="1451">
 
 
 
-<meta itemprop="keywords" content="andrew_ng," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="andrew_ng," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Course] Neural Network Basics"/>
 <meta name="twitter:description" content="Some basic knowledge before openning the gate of deep learning world&hellip;"/>
 
@@ -186,18 +185,18 @@
 <ul>
 <li>feature vector</li>
 </ul>
-<p>$$X = 
+<p>$$X =
 \begin{bmatrix}
 | &amp; | &amp; &hellip; &amp; | \cr
 x^{(1)} &amp; x^{(2)} &amp; &hellip; &amp; x^{(m)} \cr
-| &amp; | &amp; &hellip; &amp; | 
+| &amp; | &amp; &hellip; &amp; |
 \end{bmatrix}
 \quad X\in\reals^{n_x*m}
 $$</p>
 <ul>
 <li>label vector</li>
 </ul>
-<p>$$Y = 
+<p>$$Y =
 \begin{bmatrix}
 y^{(1)}&amp;y^{(2)}&amp;&hellip;&amp;y^{(m)}
 \end{bmatrix}
@@ -273,15 +272,15 @@ f(z) = {1 \over a} = 1 + e^{-z} \newline
 $$</p>
 <p>then</p>
 <p>$$
-\tag{1} f'(z) = ({1 \over a})' = - {a' \over a^2}
+\tag{1} f&rsquo;(z) = ({1 \over a})&rsquo; = - {a&rsquo; \over a^2}
 $$</p>
 <p>$$
-\tag{2} f'(z) = (1 + e^{-z})' = (e^{-z})' = -e^{-z} = 1 - f(z) = 1 - {1 \over a}
+\tag{2} f&rsquo;(z) = (1 + e^{-z})&rsquo; = (e^{-z})&rsquo; = -e^{-z} = 1 - f(z) = 1 - {1 \over a}
 $$</p>
 <p>so</p>
 <p>$$
-{a' \over a^2} = {1 - a \over a} \implies a' = a(1-a) \newline
-where \quad a' = {da \over dz}
+{a&rsquo; \over a^2} = {1 - a \over a} \implies a&rsquo; = a(1-a) \newline
+where \quad a&rsquo; = {da \over dz}
 $$</p>
 <p>therefore</p>
 <p>$$
