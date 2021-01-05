@@ -49,7 +49,7 @@
 <meta itemprop="description" content="Small talks about the virtual environments during machine learing">
 <meta itemprop="datePublished" content="2021-01-05T22:47:58&#43;08:00" />
 <meta itemprop="dateModified" content="2021-01-05T22:47:58&#43;08:00" />
-<meta itemprop="wordCount" content="491">
+<meta itemprop="wordCount" content="966">
 
 
 
@@ -125,8 +125,8 @@
         <div class="post-category">
             <a href="/categories/machine-learning/"> Machine Learning </a>
             </div>
-          <span class="more-meta"> 491 words </span>
-          <span class="more-meta"> 1 min read </span>
+          <span class="more-meta"> 966 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
@@ -136,6 +136,7 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#build-essential--cmake">Build essential &amp; CMake</a></li>
     <li><a href="#conda">Conda</a></li>
     <li><a href="#r">R</a></li>
     <li><a href="#docker">Docker</a>
@@ -149,11 +150,43 @@
   </div>
 </div>
     <div class="post-content">
-      <h1 id="conda">Conda</h1>
+      <h1 id="build-essential--cmake">Build essential &amp; CMake</h1>
+<p>好多软件是需要编译才能使用的，没有安装包可以直接安装。这两个工具就是用来编译的。</p>
+<p><strong>Build essential</strong></p>
+<p>它是ubuntu提供的软件包，提供c/c++编译环境，即一键安装gcc和g++以及它们的依赖。Ubuntu远程控制打开：<code>system-&gt;preference-&gt;remote destop</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 查看build essential包的依赖</span>
+$ apt-cache depends build-essential
+<span class="c1"># 安装build essential包</span>
+$ sudo apt-get install build-essential
+<span class="c1"># 如果发现 can&#39;t find build-essential，可先刷新本地服务列表</span>
+$ apt-get update
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://cmake.org/download/">Get CMake</a></p>
+<p>进入 cmake 安装目录，先后执行<code>./configure</code>，<code>make</code>，<code>make install</code>。<a href="https://www.ibm.com/developerworks/cn/linux/l-cn-cmake/index.html">参考</a></p>
+<p>CMake 是一个跨平台的自动化建构系统,它使用一个名为 <code>CMakeLists.txt</code> 的文件来描述构建过程,可以产生标准的构建文件,如 Unix 的 Makefile 或Windows Visual C++ 的 projects/workspaces 。文件 CMakeLists.txt 需要手工编写,也可以通过编写脚本进行半自动的生成。CMake 提供了比 autoconfig 更简洁的语法。在 linux 平台下使用 CMake 生成 <code>Makefile</code> 并编译的流程如下:</p>
+<ol>
+<li>编写 CmakeLists.txt。</li>
+<li>执行命令<code>cmake PATH</code>或者<code>ccmake PATH</code>生成 Makefile ( PATH 是 CMakeLists.txt 所在的目录 )。</li>
+<li>使用 make 命令进行编译。</li>
+</ol>
+<br/>
+<h1 id="conda">Conda</h1>
 <p>First install mini conda then <code>conda install python==3.7</code>.</p>
 <br/>
 <h1 id="r">R</h1>
 <p><code>conda install r-base</code> (NOT VERIFIED)</p>
+<br/>
 <h1 id="docker">Docker</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
